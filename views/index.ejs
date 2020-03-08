@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+	<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+	</head>
+<html>
+<body>
+	<div class="container">
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        URL Shortener
+      </h1>
+      <h2 class="subtitle">
+        written in node, express and mongo
+      </h2>
+    </div>
+  </div>
+</section>
+
+	<form action="/shortUrls" method="POST" class="control">
+		<label for="fullUrl">URL</label>
+		<input required type="url" name="fullUrl" id="fullUrl" class="input is-rounded column is-half"> </input>
+		
+		<button class="button" type="submit"> Shorten it! </button>
+	</form>
+	<br />
+	
+	<table class="table is-bordered is-fullwidth">
+		<thead class="thead">
+			<tr>
+				<th> URL</th>
+				<th> Short URL</th>
+				<th> Clicks</th>
+			</tr>
+		</thead>
+		<tbody class="tbody">
+			<% shortUrls.forEach(eachshort => { %>
+			
+			<tr>
+				<td><a href="<%= eachshort.full %>" /> <%= eachshort.full %></td>
+				<td><a href="<%= eachshort.short %>" /> <%= eachshort.short %></td>
+				<td><%= eachshort.clicks %></td>
+			
+			</tr>
+			
+			<% }) %>
+			
+		</tbody>
+	</table>
+
+	</div>
+</body>
+</html>

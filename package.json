@@ -1,0 +1,28 @@
+{
+  "name": "nodejs_url_shortener",
+  "version": "1.0.0",
+  "description": "node js based url shortner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikramaroskar/nodejs_url_shortener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikramaroskar/nodejs_url_shortener/issues"
+  },
+  "homepage": "https://github.com/vikramaroskar/nodejs_url_shortener#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3",
+    "shortid": "^2.2.15"
+  }
+}
